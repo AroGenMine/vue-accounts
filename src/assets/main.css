@@ -1,0 +1,42 @@
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html, body, #app { height: 100%; }
+body { margin: 0; font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif; }
+.container { max-width: 960px; margin: 24px auto; padding: 16px; }
+
+.h2 { margin: 0; font-size: 20px; font-weight: 700; }
+.btn { height: 34px; min-width: 34px; border-radius: 8px; border: 1px solid #d1d5db; background:#fff; cursor: pointer; }
+.btn:hover { background: #f9fafb; }
+.btn--danger { border-color: #fecaca; }
+.btn--danger:hover { background: #fee2e2; }
+
+.help { font-size: 12px; color: #667085; }
+.hint { font-size: 12px; color:#667085; background:#f4f6f8; padding:8px 12px; border-radius:8px; margin: 10px 0 14px; }
+
+.list { list-style: none; padding: 0; margin: 0; display:flex; flex-direction: column; gap: 12px; }
+.card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 12px; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+.card--invalid { border-color:#ef4444; box-shadow: 0 0 0 2px rgba(239,68,68,.12) inset; }
+
+.row { display:flex; gap:12px; flex-wrap:wrap; }
+.col { flex: 1 1 280px; display:flex; flex-direction:column; gap:6px; }
+.col--type { max-width: 220px; }
+
+.lbl { font-size: 12px; color:#475467; }
+.req { color:#ef4444; margin-left: 4px; }
+
+input, select {
+  height: 38px; border:1px solid #d1d5db; border-radius:8px; padding:0 10px; font-size:14px; outline:none;
+}
+input:focus, select:focus { border-color:#6366f1; box-shadow: 0 0 0 3px rgba(99,102,241,.15); }
+
+.card__footer { margin-top:10px; display:flex; justify-content:space-between; align-items:center; }
+.chips { display:flex; gap:6px; flex-wrap:wrap; }
+.chip { background:#eef2ff; color:#3730a3; border-radius:999px; padding:4px 10px; font-size:12px; }
+
+.password-wrap { position: relative; display:flex; align-items:center; }
+.password-wrap input { width:100%; padding-right:36px; }
+.toggle-eye {
+  position:absolute; right:8px; top:50%; transform:translateY(-50%);
+  background:transparent; border:none; cursor:pointer; font-size:16px; opacity:.8;
+}
+.toggle-eye:hover { opacity: 1; }
