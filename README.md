@@ -1,5 +1,24 @@
-# Vue 3 + TypeScript + Vite
+# Accounts Form (Vue 3 + TypeScript + Pinia)
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Тестовое задание: форма управления учётными записями.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Покрытие требований
+- Кнопка «+» добавляет пустую запись (Метка, Тип, Логин, Пароль).
+- Удаление записи.
+- Поле **Метка** — необяз., строка ≤ 50 символов, ввод через `,`; в состоянии хранится **массив строк**.
+- Тип записи:
+  - **LDAP** — поле «Пароль» скрывается и сохраняется как `null`.
+  - **Локальная** — пароль обязателен (≤ 100).
+- **Логин** обязателен (≤ 100).
+- Валидация на `blur`/изменении: валидная карточка сохраняется, невалидная подсвечивается красной рамкой.
+- Сохранение через стейт-менеджер (**Pinia**) c персистом в `localStorage` — после перезагрузки записи отображаются.
+
+## Стек
+Vue 3 (Composition API), TypeScript, Pinia, Vite.
+
+## Запуск
+```bash
+npm i
+npm run dev
+# Production:
+npm run build && npm run preview
